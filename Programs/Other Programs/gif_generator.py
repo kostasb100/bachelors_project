@@ -15,7 +15,6 @@ Purpose:
 Date: 2026-02
 """
 
-
 from PIL import Image, ImageDraw, ImageFont
 import glob
 import os
@@ -61,5 +60,5 @@ frames[0].save(
     loop=0
 )
 
-
 print(f"GIF saved as: {gif_path}")
+
