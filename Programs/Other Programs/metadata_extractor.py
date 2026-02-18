@@ -7,7 +7,7 @@ This program:
 - Saves the extracted data to .csv files
 
 Purpose:
-- Enables inspection and comparison of capture metadata
+- Enables inspection and comparison of capture metadata (exposure time, digital gain, and etc.)
   across multiple experiment cycles
 
 Date: 2026-02
@@ -115,5 +115,6 @@ for time_dir in time_dirs:
 # Finish writing inside CSV files and close them
 for f in files.values():
     f.close()
+
 
 print("Metadata files saved in:", root_dir)
