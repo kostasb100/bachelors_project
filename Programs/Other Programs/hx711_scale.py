@@ -2,8 +2,8 @@
 Standalone mass measurement module using the HX711 24-bit ADC and load cell.
 
 This program:
-- Uses a reference unit derived from calibration.py
-- Provides real time measurements from the HX711 chip
+- Uses a reference unit derived from hx711_scale_calibration.py
+- Provides real time measurements from the HX711 based scale
 
 Purpose:
 - Measurement of plant-based sample mass before and after experimental cycles.
@@ -39,4 +39,5 @@ try:
 # Shut down upon interrupt
 except KeyboardInterrupt:
     print("\nExiting...")
+
     GPIO.cleanup()
