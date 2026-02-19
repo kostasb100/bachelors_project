@@ -7,7 +7,7 @@ This program:
 - Saves the extracted data to .csv files
 
 Purpose:
-- Enables inspection and comparison of capture metadata (exposure time, digital gain, and etc.)
+- Enables inspection and comparison of capture metadata
   across multiple experiment cycles
 
 Date: 2026-02
@@ -18,7 +18,7 @@ import json
 import csv
 
 # Metadata(.json) file path
-root_dir = r"file_path"
+root_dir = r"C:\Users\kbalc\Desktop\uni\bachelor_project\measurements\12.22-12.25\12-24\eksperimentas"
 json_names = ["f0.json", "l0.json", "n0.json"]
 
 # Save CSV files inside root_dir
@@ -30,8 +30,8 @@ output_files = {
 
 # Save these fields inside CSV files
 fields = [
-    "time", "shutter_speed",
-    "ExposureTime", "FocusFoM", "DigitalGain",
+    "Time", "ExposureTime(Set)",
+    "ExposureTime(Real)", "FocusFoM", "DigitalGain",
     "SensorTemperature",
     "LensPosition", "ColourTemperature", "Lux", "AnalogueGain"
 ]
@@ -111,10 +111,8 @@ for time_dir in time_dirs:
 
             writers[json_name].writerow(row)
 
-
 # Finish writing inside CSV files and close them
 for f in files.values():
     f.close()
-
 
 print("Metadata files saved in:", root_dir)
