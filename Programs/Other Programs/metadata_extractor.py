@@ -18,7 +18,7 @@ import json
 import csv
 
 # Metadata(.json) file path
-root_dir = r"C:\Users\kbalc\Desktop\uni\bachelor_project\measurements\12.22-12.25\12-24\eksperimentas"
+root_dir = r"root_dir_path"
 json_names = ["f0.json", "l0.json", "n0.json"]
 
 # Save CSV files inside root_dir
@@ -116,3 +116,4 @@ for f in files.values():
     f.close()
 
 print("Metadata files saved in:", root_dir)
+
