@@ -102,7 +102,6 @@ def perform_capture():
         GPIO.cleanup()
         print("Capture finished.")
 
-
 def perform_analysis():
     print("Starting analysis...")
 
@@ -111,7 +110,6 @@ def perform_analysis():
     output_csv = os.path.join(dng_output_folder, "raw_vs_time.csv")
     # Extract time from the time-stamped images names
     time_pattern = re.compile(r"image_([0-9]+(?:\.[0-9]+)?)s\.dng", re.IGNORECASE)
-
 
     results = []
 
@@ -154,12 +152,9 @@ def perform_analysis():
 if mode == "1":
     perform_capture()
     perform_analysis()
-
 elif mode == "2":
     perform_capture()
-
 elif mode == "3":
     perform_analysis()
-
 else:
     print("Invalid mode selected.")
